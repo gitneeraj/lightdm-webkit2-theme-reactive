@@ -1,6 +1,6 @@
 {
   "name": "lightdm-webkit2-theme-reactive",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "scripts": {
     "dev": "vite --mode dev",
     "build:lightdm": "vite build --mode prod",
