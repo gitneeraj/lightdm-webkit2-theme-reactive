@@ -1,0 +1,197 @@
+lightdm-webkit2-greeter(1)                          General Commands Manual                         lightdm-webkit2-greeter(1)
+
+NAME
+       lightdm-webkit2-greeter
+
+SYNOPSIS
+       LightDM greeter that uses webkit2 for theming via HTML/JavaScript.
+
+DESCRIPTION
+       lightdm-webkit2-greeter is a LightDM greeter that uses webkit2 for theming.  Themes can be written using a combination
+       of HTML and Javascript.
+
+THEME JAVASCRIPT API
+       Please note that all properties and functions which are marked as "deprecated" are only available for backwards
+       compatibility and will be removed in a future version of lightdm-webkit2-greeter.  Theme authors should not use any
+       deprecated properties or functions in new works and should update any existing works which make use of deprecated
+       properties and/or functions to ensure continued proper functionality.
+
+       The following functions must be provided by the greeter theme and callable on the global "window" object.
+
+       show_prompt(text, type)
+           This will be called when LightDM needs to prompt the user for some reason, such as asking for a password.  The
+           "text" parameter will be the text of the prompt, and the "type" parameter will either be "text" for a visible
+           prompt, or "password" for a prompt that the input should be hidden.
+
+       show_message(text, type)
+           This will be called when LightDM needs to display some info for the user.  The "text" parameter will be the text of
+           the message, and the "type" parameter will either be "info" for an information message, or "error" for an error
+           message that LightDM has encountered.
+
+       authentication_complete()
+           This function is called by LightDM when authentication has completed.
+
+       autologin_timer_expired()
+           This function is called by LightDM when an autologin user's login timer has expired.  The greeter should reset the
+           authentication process.
+
+       The following functions are available for the greeter to call to execute actions within LightDM.
+
+       lightdm.authenticate(username)
+           Specifies the username of the user we'd like to start authenticating as.  Note that if you call
+           lightdm.authenticate with no argument, LightDM (via PAM) will issue a show_prompt() call to ask for the username.
+           The older function lightdm.start_authentication() has been deprecated.
+
+       lightdm.authenticate_as_guest()
+           Authenticates as the guest user.
+
+       lightdm.cancel_authentication()
+           Cancels the authentication of any user currently in the process of authenticating.
+
+       lightdm.cancel_autologin()
+           Cancels the authentication of the autologin user.  The older function lightdm.cancel_timed_login() has been
+           deprecated.
+
+       lightdm.get_hint(hint_name)
+           Returns the value of a named hint provided by LightDM.
+
+       lightdm.suspend()
+           Suspends the system, if the greeter has the authority to do so.
+
+       lightdm.hibernate()
+           Hibernates the system, if the greeter has the authority to do so.
+
+       lightdm.start_session_sync(session)
+           Once LightDM has successfully authenticated the user, start the user's session by calling this function.  "session"
+           is the authenticated user's session.  If no session is passed, start the authenticated user with the system default
+           session. The older function lightdm.login(user, session) has been deprecated.
+
+       lightdm.respond(text)
+           When LightDM has prompted for input, provide the response to LightDM.  The deprecated function was
+           "provide_secret".  This is still available for backwards compatibility, but authors of greeters should move to
+           using lightdm.respond().
+
+       lightdm.restart()
+           Restarts the system, if the greeter has the authority to do so.
+
+       lightdm.set_language(lang)
+           Will set the language for the current LightDM session.
+
+       lightdm.shutdown()
+           Shuts down the system, if the greeter has the authority to do so.
+
+       Variables available within the greeter are:
+
+       lightdm.authentication_user
+           String. The username of the authentication user being authenticated or null if no authentication is in progress.
+
+       lightdm.autologin_guest
+           Boolean. Indicates the guest user should be used for autologin.
+
+       lightdm.autologin_timeout
+           Number. The number of seconds to wait before automatically logging in. The older variable lightdm.timed_user_delay
+           has been deprecated.
+
+       lightdm.autologin_user
+           String. The name of the user account that should be logged into automatically after timed login delay has passed.
+           The older variable lightdm.timed_login_user has been deprecated.
+
+       lightdm.can_hibernate
+           Boolean. Whether or not the system can be made to hibernate by the greeter.
+
+       lightdm.can_restart
+           Boolean. Whether or not the system can be restarted by the greeter.
+
+       lightdm.can_shutdown
+           Boolean. Whether or not the system can be shutdown by the greeter.
+
+       lightdm.can_suspend
+           Boolean. Whether or not the system can be suspended by the greeter.
+
+       lightdm.default_session
+           String. The name of the default session (as configured in lightdm.conf).
+
+       lightdm.has_guest_account
+           Boolean. A guest account is available for login.
+
+       lightdm.hide_users
+           Boolean. The whole list of users should not be displayed.
+
+       lightdm.hostname
+           String. The hostname of the system.
+
+       lightdm.is_authenticated
+           Boolean. Indicates if the user has successfully authenticated.
+
+       lightdm.in_authentication
+           Boolean. Indicates if lightdm is currently in the authentication phase.
+
+       lightdm.language
+           String. The currently selected language. The older variable name lightdm.default_language is deprecated.
+
+       lightdm.layout
+           String. The name of the currently active keyboard layout. To change the layout, assign a valid layout name to this
+           variable. The older variable name lightdm.default_layout is deprecated.
+
+       lightdm.layouts
+           Array. The keyboard layouts that are available on the system. Returns an Array of LightDMLayout objects.
+
+       lightdm.num_users
+           Number. The number of users able to log in.
+
+       lightdm.select_guest
+           Boolean. The guest user should be selected by default for login.
+
+       lightdm.select_user
+           String. The username that should be selected by default for login.
+
+       lightdm.sessions
+           Array. The sessions that are available on the system. Returns an Array of LightDMSession objects.
+
+       lightdm.users
+           Array. The users that are able to log in. Returns an Array of LightDMUser objects.
+
+       The following calls can be made to read configuration keys out of the lightdm-webkit2-greeter configuration file.
+
+       config.get_str(section, key)
+           Returns the string value associated with key under the "section" in the configuration file.
+
+       config.get_num(section, key)
+           Returns the numeric value associated with key under the "section" in the configuration file.
+
+       config.get_bool(section, key)
+           Returns the boolean value associated with key under the "section" in the configuration file.
+
+       The greeterutil object has some utility functions associated with it which are intended to make a theme author's work
+       easier.
+
+       greeterutil.dirlist(path)
+           Returns an array of strings of filenames present at "path", or Null if the path does not exist.
+
+       greeterutil.txt2html(txt)
+           Returns a simple HTML conversion of the passed text.  Newlines are replaced with <br>, and the characters &, <, >,
+           and " are replaced with their HTML equivalents.
+
+       Please see the LightDM API documentation for the complete list of calls available.  The lightdm-webkit2-greeter
+       implements all of the LightDM API.
+
+CONFIGURATION
+       /etc/lightdm/lightdm-webkit2-greeter.conf
+           Keyfile that contains one key: webkit-theme.  This should point to which theme the greeter should use.
+
+FILES
+       /usr/share/lightdm-webkit/themes
+           Directory where themes should be stored.
+
+EXAMPLES
+       Please see the "antergos" and "simple" themes that are shipped with lightdm-webkit2-greeter.
+
+SEE ALSO
+       http://people.ubuntu.com/~robert-ancell/lightdm/reference/core.html
+
+AUTHOR
+       The legacy lightdm-webkit-greeter was written by Robert Ancell <robert.ancell@canonical.com>.  It was ported to webkit2
+       by the Antergos Developers <dev@antergos.com>. Also includes code improvements contributed by Scott Balneaves
+       <sbalneav@ltsp.org>.
+
+                                                          2016.01.10                                lightdm-webkit2-greeter(1)
