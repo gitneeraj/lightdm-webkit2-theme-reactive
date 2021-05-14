@@ -4,7 +4,7 @@ const lightdm = () => {
     in_authentication: false,
     is_authenticated: false,
     authentication_user: null,
-    default_session: 'dwm',
+    default_session: 'default',
     can_suspend: true,
     can_hibernate: true,
     can_shutdown: true,
