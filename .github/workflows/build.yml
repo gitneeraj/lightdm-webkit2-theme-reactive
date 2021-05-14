@@ -1,10 +1,11 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# This workflow will do a clean install of node dependencies, build the source code and create tagged release
 
-name: Build CI
+name: Build and Release CI
 
 on:
   push:
+    tags:
+      - 'v*'
 
 jobs:
   release-project:
@@ -26,8 +27,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
         env:
@@ -35,8 +36,9 @@ jobs:
         with:
           upload_url: ${{ steps.create-new-release.outputs.upload_url }}
           asset_path: ./reactive.zip
-          asset_name: reactive-v${{ github.run_number }}.zip
+          asset_name: lightdm-webkit2-theme-reactive-${{ github.ref }}.zip
           asset_content_type: application/zip
+
   build-project:
     name: Build Project
     runs-on: ubuntu-latest
