@@ -4,8 +4,8 @@ name: Build and Release CI
 
 on:
   push:
-    tags:
-      - 'v*'
+    # tags:
+    #   - 'v*'
 
 jobs:
   release-project:
@@ -29,6 +29,9 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
         env:
@@ -36,7 +39,7 @@ jobs:
         with:
           upload_url: ${{ steps.create-new-release.outputs.upload_url }}
           asset_path: ./reactive.zip
-          asset_name: lightdm-webkit2-theme-reactive-${{ github.ref }}.zip
+          asset_name: lightdm-webkit2-theme-reactive-${{ steps.get_version.outputs.VERSION }}.zip
           asset_content_type: application/zip
 
   build-project:
