@@ -9,7 +9,7 @@ on:
 
 jobs:
   release-project:
-    name: Release Static site to Github Releasess
+    name: Release Static site to Github Releases
     runs-on: ubuntu-latest
     needs: build-project
     steps:
@@ -20,7 +20,8 @@ jobs:
       - name: Archive site content
         uses: thedoctor0/zip-release@master
         with:
-          filename: reactive.zip
+          filename: reactive.tar.gz
+          type: tar
       - name: Create Github Release
         id: create-new-release
         uses: actions/create-release@v1
@@ -38,9 +39,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-          asset_path: ./reactive.zip
-          asset_name: lightdm-webkit2-theme-reactive-${{ steps.get_version.outputs.VERSION }}.zip
-          asset_content_type: application/zip
+          asset_path: ./reactive.tar.gz
+          asset_name: lightdm-webkit2-theme-reactive-${{ steps.get_version.outputs.VERSION }}.tar.gz
+          asset_content_type: application/tar+gzip
 
   build-project:
     name: Build Project
