@@ -31,7 +31,7 @@ jobs:
           release_name: Release ${{ github.ref }}
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/heads\//}
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
         env:
