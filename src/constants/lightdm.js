@@ -94,11 +94,9 @@ const lightdm = () => {
     },
     shutdown: () => {
       console.log('System is shutting down...')
-      // location.reload()
     },
     restart: () => {
       console.log('System is rebooting...')
-      // location.reload()
     },
     hibernate: () => {
       console.log('System is hibernating...')
