@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite --mode dev",
     "build:lightdm": "vite build --mode prod",
+    "build:ghpages": "vite build --mode ghpages",
     "build:web": "vite build",
     "serve": "vite preview"
   },
