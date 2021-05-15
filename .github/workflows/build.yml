@@ -54,8 +54,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Build for lightdm
       - run: npm i
       - run: npm run build:lightdm
 
@@ -65,7 +63,6 @@ jobs:
           name: reactive
           path: reactive/
 
-      - name: Build for Github Pages
       - run: npm run build:ghpages
       - name: Deploy to Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
