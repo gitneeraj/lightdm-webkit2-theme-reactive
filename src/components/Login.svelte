@@ -34,31 +34,39 @@
   }
 </script>
 
-<div class="login-wrapper" in:fade>
+<div class="login-wrapper flex flex-col items-center gap-5" in:fade>
   <div
-    class="user-profile-image"
+    class="user-profile-image h-24 w-24 rounded-full bg-cover bg-center shadow-lg bg-gray-500 bg-opacity-20"
     style={`background-image: url('${getAbsolutePath()}images/default-profile.png')`}
   />
 
   {#if $isAuthenticationError}
-    <span transition:slide class="error-message">Invalid Credentials</span>
+    <span transition:slide class="error-message text-red-400"
+      >Invalid Credentials</span
+    >
   {/if}
 
-  <form on:submit|preventDefault={handleOnSubmit}>
+  <form
+    class="flex flex-col justify-center items-center gap-2"
+    on:submit|preventDefault={handleOnSubmit}
+  >
     <input
       type="text"
       placeholder="Username"
       bind:value={username}
       autocomplete="off"
-      class={`${isUsernameEmpty ? 'shake error-border' : ''}`}
+      class={`px-2 py-2 text-center rounded focus:shadow-md outline-none transition ease-out duration-300 bg-gray-500 bg-opacity-20 ${
+        isUsernameEmpty ? 'shake error-border' : ''
+      }`}
     />
     <input
       type="password"
       placeholder="Password"
       bind:value={password}
       autocomplete="off"
+      class="px-2 py-2 text-center rounded focus:shadow-md outline-none transition ease-out duration-300 bg-gray-500 bg-opacity-20"
     />
-    <button type="submit" disabled={$isLogin}>
+    <button class="focus:outline-none" type="submit" disabled={$isLogin}>
       {#if $isLogin}
         <Icon name="loading" class="loading spinner" width="32" height="32" />
       {:else if $isAuthenticated}
@@ -70,7 +78,7 @@
   </form>
 </div>
 
-<style lang="scss">
+<!-- <style lang="scss">
   .login-wrapper {
     display: flex;
     flex-direction: column;
@@ -137,4 +145,4 @@
       }
     }
   }
-</style>
+</style> -->
