@@ -16,13 +16,13 @@
 
 <footer class="footer-wrapper">
   <div class="dm-list">
-    <div class="link-icon">
+    <div class="link-icon text-gray-100 dark:text-gray-400">
       <Icon name="laptop" class="dm-laptop" width="32" height="32" />
       <span>{defaultDE}</span>
     </div>
   </div>
   <div class="power-options">
-    <Link to="power" class="link-icon">
+    <Link to="power" class="link-icon text-gray-100 dark:text-gray-400">
       <Icon name="power" class="power" width="32" height="32" />
     </Link>
   </div>

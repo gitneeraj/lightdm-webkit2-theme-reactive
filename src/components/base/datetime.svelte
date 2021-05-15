@@ -31,7 +31,7 @@
   })
 </script>
 
-<div>
+<div class="text-gray-100 dark:text-gray-400">
   {day}
   {months[month]}
   {year}

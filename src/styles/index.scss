@@ -19,6 +19,8 @@ a {
 }
 
 .sitelayout-wrapper {
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.05fr 1fr 0.05fr;
@@ -28,10 +30,10 @@ a {
     'footer footer';
   height: 100vh;
   font-family: 'Lato Regular', sans-serif;
-  background: $mint-green;
-  background: -webkit-linear-gradient(top left, $mint-green, $off-yellow);
-  background: -moz-linear-gradient(top left, $mint-green, $off-yellow);
-  background: linear-gradient(to bottom right, $mint-green, $off-yellow);
+  // background: $mint-green;
+  // background: -webkit-linear-gradient(top left, $mint-green, $off-yellow);
+  // background: -moz-linear-gradient(top left, $mint-green, $off-yellow);
+  // background: linear-gradient(to bottom right, $mint-green, $off-yellow);
   color: $background;
 
   .link-icon {
