@@ -35,11 +35,11 @@
 </script>
 
 <div
-  class="login-wrapper flex flex-col items-center gap-5 shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 py-12 px-20 border-opacity-10 border-solid dark:bg-gray-700"
+  class="login-wrapper flex flex-col items-center shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 py-12 px-20 border-opacity-10 border-solid dark:bg-gray-700"
   in:fade
 >
   <div
-    class="user-profile-image h-24 w-24 rounded-full bg-cover bg-center shadow-lg bg-gray-500 bg-opacity-20"
+    class="user-profile-image h-24 w-24 mb-5 rounded-full bg-cover bg-center shadow-lg bg-gray-500 bg-opacity-20"
     style={`background-image: url('${getAbsolutePath()}images/default-profile.png')`}
   />
 
@@ -50,7 +50,7 @@
   {/if}
 
   <form
-    class="flex flex-col justify-center items-center gap-2"
+    class="flex flex-col justify-center items-center"
     on:submit|preventDefault={handleOnSubmit}
   >
     <input
@@ -58,7 +58,7 @@
       placeholder="Username"
       bind:value={username}
       autocomplete="off"
-      class={`px-2 py-2 text-center rounded focus:shadow-md outline-none transition ease-out duration-300 bg-white bg-opacity-10 text-gray-900 placeholder-gray-300 border-2 border-gray-50 border-opacity-5 border-solid dark:text-gray-300 ${
+      class={`px-2 py-2 mb-3 text-center rounded focus:shadow-md outline-none transition ease-out duration-300 bg-white bg-opacity-10 text-gray-900 placeholder-gray-300 border-2 border-gray-50 border-opacity-5 border-solid dark:text-gray-300 ${
         isUsernameEmpty ? 'shake error-border' : ''
       }`}
     />
@@ -70,7 +70,7 @@
       class="px-2 py-2 text-center rounded focus:shadow-md outline-none transition ease-out duration-300 bg-white bg-opacity-10 text-gray-900 placeholder-gray-300 border-2 border-gray-50 border-opacity-5 border-solid dark:text-gray-300"
     />
     <button
-      class="focus:outline-none text-gray-100 mt-4 dark:text-gray-400"
+      class="focus:outline-none text-gray-100 mt-5 dark:text-gray-400"
       type="submit"
       disabled={$isLogin}
     >

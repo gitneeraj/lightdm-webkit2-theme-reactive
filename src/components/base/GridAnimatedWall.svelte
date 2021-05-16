@@ -34,44 +34,44 @@
   class="grid-background absolute inset-0 p-2 grid grid-cols-12 gap-2 transform -skew-y-12 scale-125 opacity-50"
 >
   <!-- row 1 -->
-  <div class="col-span-2 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-5 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-1 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-4 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-2 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-5 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-1 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-4 bg-gray-800 rounded animate-pulse" />
 
   <!-- row 2 -->
-  <div class="col-span-5 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-3 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-2 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-2 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-5 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-3 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-2 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-2 bg-gray-800 rounded animate-pulse" />
 
   <!-- row 3 -->
-  <div class="col-span-4 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-7 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-1 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-4 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-7 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-1 bg-gray-800 rounded animate-pulse" />
 
   <!-- row 4 -->
-  <div class="col-span-2 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-4 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-6 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-2 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-4 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-6 bg-gray-800 rounded animate-pulse" />
 
   <!-- row 5 -->
-  <div class="col-span-5 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-3 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-3 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-5 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-3 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-3 bg-gray-800 rounded animate-pulse" />
 
   <!-- row 6 -->
-  <div class="col-span-4 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-6 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-2 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-4 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-6 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-2 bg-gray-800 rounded animate-pulse" />
 
   <!-- row 7 -->
-  <div class="col-span-6 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-3 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-3 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-6 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-3 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-3 bg-gray-800 rounded animate-pulse" />
 
   <!-- row 8 -->
-  <div class="col-span-2 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-5 bg-gray-800 rounded animate-pulse" />
-  <div class="col-span-5 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-2 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-5 bg-gray-800 rounded animate-pulse" />
+  <div class="h-32 col-span-5 bg-gray-800 rounded animate-pulse" />
 </div>
