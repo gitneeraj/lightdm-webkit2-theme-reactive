@@ -2,6 +2,7 @@
   import Header from './Header.svelte'
   import Footer from './Footer.svelte'
   import TailwindCSS from './base/TailwindCSS.svelte'
+  import GridAnimatedWall from './base/GridAnimatedWall.svelte'
 </script>
 
 <TailwindCSS />
@@ -17,11 +18,12 @@
   <div
     class="w-12 h-12 bg-red-300 absolute top-2/3 left-1/3 rounded-full bg-gradient-to-r from-purple-200 via-purple-400 to-indigo-900"
   /> -->
-  <Header />
-  <main class="main main-wrapper">
+  <GridAnimatedWall />
+  <Header class="z-10" />
+  <main class="main main-wrapper z-10">
     <slot />
   </main>
-  <Footer />
+  <Footer class="z-10" />
 </div>
 
 <style lang="scss" global>

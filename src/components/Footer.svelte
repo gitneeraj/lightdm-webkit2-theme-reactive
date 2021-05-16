@@ -14,7 +14,7 @@
   })
 </script>
 
-<footer class="footer-wrapper">
+<footer class={`footer-wrapper ${$$props.class}`}>
   <div class="dm-list">
     <div class="link-icon text-gray-100 dark:text-gray-400">
       <Icon name="laptop" class="dm-laptop" width="32" height="32" />
