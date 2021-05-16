@@ -35,7 +35,7 @@
 </script>
 
 <div
-  class="login-wrapper flex flex-col items-center shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 py-12 px-20 border-opacity-10 border-solid dark:bg-gray-700"
+  class="login-wrapper flex flex-col items-center shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 py-12 px-20 border-opacity-10 border-solid dark:bg-gray-700 dark:bg-opacity-60"
   in:fade
 >
   <div
@@ -44,7 +44,7 @@
   />
 
   {#if $isAuthenticationError}
-    <span transition:slide class="error-message text-red-400"
+    <span transition:slide class="error-message mb-5 text-red-400"
       >Invalid Credentials</span
     >
   {/if}
@@ -84,72 +84,3 @@
     </button>
   </form>
 </div>
-
-<!-- <style lang="scss">
-  .login-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .error-message {
-      color: $rose-bud-dark;
-      margin-bottom: 8px;
-    }
-    .user-profile-image {
-      height: 100px;
-      width: 100px;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 50%;
-      margin-bottom: 12px;
-      box-shadow: -1px 3px 11px -3px rgba(0, 0, 0, 0.74);
-      -webkit-box-shadow: -1px 3px 11px -3px rgba(0, 0, 0, 0.74);
-      -moz-box-shadow: -1px 3px 11px -3px rgba(0, 0, 0, 0.74);
-      background-color: $background;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    input[type='text'],
-    input[type='password'] {
-      border-radius: 5px;
-      padding: 8px;
-      margin-bottom: 8px;
-      background: $background-opacity;
-      color: $background;
-      letter-spacing: 0.3px;
-      text-align: center;
-      transition: all 0.2s;
-
-      &:focus {
-        outline: none;
-        box-shadow: -1px 3px 4px -4px rgba(0, 0, 0, 0.74);
-        -webkit-box-shadow: -1px 3px 4px -4px rgba(0, 0, 0, 0.74);
-        -moz-box-shadow: -1px 3px 4px -4px rgba(0, 0, 0, 0.74);
-      }
-      &::placeholder {
-        color: $background;
-        opacity: 0.5;
-      }
-    }
-
-    button {
-      background: transparent;
-      font-size: 30px;
-      color: $background;
-      cursor: pointer;
-
-      &:focus {
-        outline: none;
-      }
-
-      &:disabled {
-        cursor: default;
-      }
-    }
-  }
-</style> -->

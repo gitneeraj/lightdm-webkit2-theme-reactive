@@ -27,8 +27,13 @@
 >
   <Icon
     name={`${toggleDark ? 'sun-dark' : 'sun-light'}`}
-    class={`${toggleDark ? 'sun-dark' : 'sun-light'}`}
+    class={`mr-1 ${toggleDark ? 'sun-dark' : 'sun-light'}`}
     width="32"
     height="32"
   />
+  {#if toggleDark}
+    <span>Dark</span>
+  {:else}
+    <span>Light</span>
+  {/if}
 </button>

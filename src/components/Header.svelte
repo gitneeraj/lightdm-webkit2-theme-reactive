@@ -12,8 +12,8 @@
       <Icon name="cog" class="cog" width="32" height="32" />
     </Link> -->
   </div>
-  <div id="system-info" class="flex">
-    <ModeSwitch class="mr-3" />
+  <div id="system-info" class="flex items-center">
+    <ModeSwitch class="mr-5 flex items-center" />
     <DateTime />
   </div>
 </header>

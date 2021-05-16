@@ -15,18 +15,27 @@
   }
 </script>
 
-<div class="power-outer-wrapper" in:fade>
-  <div class="power-wrapper">
-    <div class="poweroff power-options" on:click={handleOnShutDown}>
-      <Icon name="power" class="power" width="48" height="48" />
+<div class="power-outer-wrapper flex flex-col items-center" in:fade>
+  <div class="power-wrapper flex mb-5">
+    <div
+      class="poweroff power-options text-3xl p-6 flex flex-col justify-center items-center text-gray-100 dark:text-gray-400 shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 border-opacity-10 border-solid dark:bg-gray-700 dark:bg-opacity-60 mr-8 cursor-pointer hover:bg-opacity-10 dark:hover:bg-opacity-20"
+      on:click={handleOnShutDown}
+    >
+      <Icon name="power" class="power mb-3" width="48" height="48" />
       <span>Shutdown</span>
     </div>
-    <div class="restart power-options" on:click={handleOnRestart}>
-      <Icon name="refresh-2" class="refresh-2" width="48" height="48" />
+    <div
+      class="restart power-options text-3xl p-10 flex flex-col items-center justify-center text-gray-100 dark:text-gray-400 shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 border-opacity-10 border-solid dark:bg-gray-700 dark:bg-opacity-60 mr-8 cursor-pointer hover:bg-opacity-10 dark:hover:bg-opacity-20"
+      on:click={handleOnRestart}
+    >
+      <Icon name="refresh-2" class="refresh-2 mb-3" width="48" height="48" />
       <span>Restart</span>
     </div>
-    <div class="sleep power-options" on:click={handleOnSuspend}>
-      <Icon name="sleep" class="sleep" width="48" height="48" />
+    <div
+      class="sleep power-options text-3xl p-8 flex flex-col items-center justify-center text-gray-100 dark:text-gray-400 shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 border-opacity-10 border-solid dark:bg-gray-700 dark:bg-opacity-60 cursor-pointer hover:bg-opacity-10 dark:hover:bg-opacity-20"
+      on:click={handleOnSuspend}
+    >
+      <Icon name="sleep" class="sleep mb-3" width="48" height="48" />
       <span>Suspend</span>
     </div>
   </div>
@@ -34,7 +43,7 @@
   <Cancel />
 </div>
 
-<style lang="scss">
+<!-- <style lang="scss">
   .power-outer-wrapper {
     display: flex;
     flex-direction: column;
@@ -92,4 +101,4 @@
       }
     }
   }
-</style>
+</style> -->
