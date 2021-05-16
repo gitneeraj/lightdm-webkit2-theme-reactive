@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite'
 import svelte from '@sveltejs/vite-plugin-svelte'
 
-export default ({ mode }) => {
+export default () => {
   let path = '/'
 
-  if(mode === 'prod'){
+  if(process.env.type === 'lightdm'){
     path = '/usr/share/lightdm-webkit/themes/reactive/'
-  }else if (mode === 'ghpages'){
-    path = 'lightdm-webkit2-theme-reactive/'
+  }else if (process.env.type === 'ghpages'){
+    path = '/lightdm-webkit2-theme-reactive/'
   }
 
   return defineConfig({

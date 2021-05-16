@@ -34,31 +34,46 @@
   }
 </script>
 
-<div class="login-wrapper" in:fade>
+<div
+  class="login-wrapper flex flex-col items-center shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 py-12 px-20 border-opacity-10 border-solid dark:bg-gray-700 dark:bg-opacity-60"
+  in:fade
+>
   <div
-    class="user-profile-image"
+    class="user-profile-image h-24 w-24 mb-5 rounded-full bg-cover bg-center shadow-lg bg-gray-500 bg-opacity-20"
     style={`background-image: url('${getAbsolutePath()}images/default-profile.png')`}
   />
 
   {#if $isAuthenticationError}
-    <span transition:slide class="error-message">Invalid Credentials</span>
+    <span transition:slide class="error-message mb-5 text-red-400"
+      >Invalid Credentials</span
+    >
   {/if}
 
-  <form on:submit|preventDefault={handleOnSubmit}>
+  <form
+    class="flex flex-col justify-center items-center"
+    on:submit|preventDefault={handleOnSubmit}
+  >
     <input
       type="text"
       placeholder="Username"
       bind:value={username}
       autocomplete="off"
-      class={`${isUsernameEmpty ? 'shake error-border' : ''}`}
+      class={`px-2 py-2 mb-3 text-center rounded focus:shadow-md outline-none transition ease-out duration-300 bg-white bg-opacity-10 text-gray-900 placeholder-gray-300 border-2 border-gray-50 border-opacity-5 border-solid dark:text-gray-300 ${
+        isUsernameEmpty ? 'shake error-border' : ''
+      }`}
     />
     <input
       type="password"
       placeholder="Password"
       bind:value={password}
       autocomplete="off"
+      class="px-2 py-2 text-center rounded focus:shadow-md outline-none transition ease-out duration-300 bg-white bg-opacity-10 text-gray-900 placeholder-gray-300 border-2 border-gray-50 border-opacity-5 border-solid dark:text-gray-300"
     />
-    <button type="submit" disabled={$isLogin}>
+    <button
+      class="focus:outline-none text-gray-100 mt-5 dark:text-gray-400"
+      type="submit"
+      disabled={$isLogin}
+    >
       {#if $isLogin}
         <Icon name="loading" class="loading spinner" width="32" height="32" />
       {:else if $isAuthenticated}
@@ -69,72 +84,3 @@
     </button>
   </form>
 </div>
-
-<style lang="scss">
-  .login-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .error-message {
-      color: $rose-bud-dark;
-      margin-bottom: 8px;
-    }
-    .user-profile-image {
-      height: 100px;
-      width: 100px;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 50%;
-      margin-bottom: 12px;
-      box-shadow: -1px 3px 11px -3px rgba(0, 0, 0, 0.74);
-      -webkit-box-shadow: -1px 3px 11px -3px rgba(0, 0, 0, 0.74);
-      -moz-box-shadow: -1px 3px 11px -3px rgba(0, 0, 0, 0.74);
-      background-color: $background;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    input[type='text'],
-    input[type='password'] {
-      border-radius: 5px;
-      padding: 8px;
-      margin-bottom: 8px;
-      background: $background-opacity;
-      color: $background;
-      letter-spacing: 0.3px;
-      text-align: center;
-      transition: all 0.2s;
-
-      &:focus {
-        outline: none;
-        box-shadow: -1px 3px 4px -4px rgba(0, 0, 0, 0.74);
-        -webkit-box-shadow: -1px 3px 4px -4px rgba(0, 0, 0, 0.74);
-        -moz-box-shadow: -1px 3px 4px -4px rgba(0, 0, 0, 0.74);
-      }
-      &::placeholder {
-        color: $background;
-        opacity: 0.5;
-      }
-    }
-
-    button {
-      background: transparent;
-      font-size: 30px;
-      color: $background;
-      cursor: pointer;
-
-      &:focus {
-        outline: none;
-      }
-
-      &:disabled {
-        cursor: default;
-      }
-    }
-  }
-</style>

@@ -2,9 +2,9 @@
   "name": "lightdm-webkit2-theme-reactive",
   "version": "0.2.1",
   "scripts": {
-    "dev": "vite --mode dev",
-    "build:lightdm": "vite build --mode prod",
-    "build:ghpages": "vite build --mode ghpages",
+    "dev": "vite",
+    "build:lightdm": "type=lightdm vite build",
+    "build:ghpages": "type=ghpages vite build",
     "build:web": "vite build",
     "serve": "vite preview"
   },
