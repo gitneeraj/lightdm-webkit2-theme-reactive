@@ -22,21 +22,21 @@
       on:click={handleOnShutDown}
     >
       <Icon name="power" class="power mb-3" width="48" height="48" />
-      <span>Shutdown</span>
+      <span class="font-family-light">Shutdown</span>
     </div>
     <div
       class="restart power-options w-48 text-3xl py-8  flex flex-col items-center justify-center text-gray-100 dark:text-gray-400 shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 border-opacity-10 border-solid dark:bg-gray-700 dark:bg-opacity-60 mr-8 cursor-pointer hover:bg-opacity-10 dark:hover:bg-opacity-20 transition duration-200"
       on:click={handleOnRestart}
     >
       <Icon name="refresh-2" class="refresh-2 mb-3" width="48" height="48" />
-      <span>Restart</span>
+      <span class="font-family-light">Restart</span>
     </div>
     <div
       class="sleep power-options w-48 text-3xl py-8 flex flex-col items-center justify-center text-gray-100 dark:text-gray-400 shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 border-opacity-10 border-solid dark:bg-gray-700 dark:bg-opacity-60 cursor-pointer hover:bg-opacity-10 dark:hover:bg-opacity-20 transition duration-200"
       on:click={handleOnSuspend}
     >
       <Icon name="sleep" class="sleep mb-3" width="48" height="48" />
-      <span>Suspend</span>
+      <span class="font-family-light">Suspend</span>
     </div>
   </div>
 

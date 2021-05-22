@@ -68,10 +68,6 @@ const lightdm = () => {
         key: 'enlightenment'
       },
       {
-        name: 'i3',
-        key: 'i3'
-      },
-      {
         name: 'Liri',
         key: 'liri'
       },

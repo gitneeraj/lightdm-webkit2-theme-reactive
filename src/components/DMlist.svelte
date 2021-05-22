@@ -19,7 +19,9 @@
 </script>
 
 <div in:fade>
-  <div class="flex flex-col max-w-4xl min-w-[500px] items-center">
+  <div
+    class="flex flex-col max-w-4xl min-w-min sm:min-w-[500px] max-h-[550px] sm:max-h-full items-center"
+  >
     <ul
       class="dmlist flex justify-center items-center flex-wrap overscroll-y-auto overflow-x-hidden mb-8"
     >
@@ -44,7 +46,7 @@
             height="64"
             width="64"
           />
-          <span class="justify-self-end">{name}</span>
+          <span class="justify-self-end font-family-regular">{name}</span>
         </li>
       {/each}
     </ul>
