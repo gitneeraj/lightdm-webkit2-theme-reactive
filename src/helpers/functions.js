@@ -1,10 +1,10 @@
 import {
-  defaultSession,
   isAuthenticationError,
   isLogin,
   isAuthenticated
 } from '../store'
 import lightdm from '../constants/lightdm'
+import { DEFAULT_SESSION } from '../constants/variables'
 
 export const setLocalStorage = (key, value) => {
   window.localStorage.setItem(key, value)
@@ -15,12 +15,11 @@ export const getLocalStorage = key => {
 }
 
 const authenticationSuccess = () => {
-  let session = null
-  defaultSession.subscribe(value => (session = value))
+  let session = getLocalStorage(DEFAULT_SESSION) || lightdm.sessions[0].key
   isAuthenticationError.update(() => false)
   isLogin.update(() => false)
   isAuthenticated.update(() => true)
-  lightdm.start_session_sync()
+  lightdm.start_session_sync(session)
 }
 
 const authenticationFail = () => {

@@ -1,4 +1,5 @@
 <script>
+  import { fade } from 'svelte/transition'
   export let name
   export let width = '1rem'
   export let height = '1rem'
@@ -71,6 +72,7 @@
 </script>
 
 <svg
+  in:fade
   class={$$props.class}
   {focusable}
   {width}

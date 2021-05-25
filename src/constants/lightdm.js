@@ -54,6 +54,30 @@ const lightdm = () => {
       {
         name: 'Budgie',
         key: 'budgie'
+      },
+      {
+        name: 'Ubuntu',
+        key: 'ubuntu'
+      },
+      {
+        name: 'Elementary OS',
+        key: 'elementary'
+      },
+      {
+        name: 'Enlightenment',
+        key: 'enlightenment'
+      },
+      {
+        name: 'Liri',
+        key: 'liri'
+      },
+      {
+        name: 'Mate',
+        key: 'lxde'
+      },
+      {
+        name: 'Mate',
+        key: 'mate'
       }
     ],
     users: [
