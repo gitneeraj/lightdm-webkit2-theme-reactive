@@ -26,26 +26,30 @@
     >
       {#each DEList as { key, name }}
         <li
-          class={`w-32 h-32 flex flex-col justify-center items-center text-gray-100 dark:text-gray-400 shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 border-opacity-10 border-solid dark:bg-gray-700 dark:bg-opacity-60 cursor-pointer hover:bg-opacity-10 dark:hover:bg-opacity-20 mb-6 transition duration-200 relative ${
+          class={`card justify-center text-gray-100 dark:text-gray-400 hover:bg-opacity-10 dark:hover:bg-opacity-20 mb-6 transition duration-200 relative ${
             DEList.length === 1 ? 'mr-0' : 'mr-6'
           }`}
-          on:click={() => handleDESelection(key)}
         >
-          {#if $defaultSession === key}
-            <Icon
-              class="absolute top-1 right-1 text-green-300"
-              name="tick"
-              height="24"
-              width="24"
+          <button
+            class="w-32 h-32 flex flex-col justify-center items-center focus:outline-none cursor-pointer"
+            on:click={() => handleDESelection(key)}
+          >
+            {#if $defaultSession === key}
+              <Icon
+                class="absolute top-1 right-1 text-green-300"
+                name="tick"
+                height="24"
+                width="24"
+              />
+            {/if}
+            <img
+              src={`${getAbsolutePath()}images/sessions/${key}.png`}
+              alt={name}
+              height="64"
+              width="64"
             />
-          {/if}
-          <img
-            src={`${getAbsolutePath()}images/sessions/${key}.png`}
-            alt={name}
-            height="64"
-            width="64"
-          />
-          <span class="justify-self-end font-family-regular">{name}</span>
+            <span class="justify-self-end font-family-regular">{name}</span>
+          </button>
         </li>
       {/each}
     </ul>
