@@ -34,10 +34,7 @@
   }
 </script>
 
-<div
-  class="login-wrapper flex flex-col items-center shadow-lg bg-opacity-20 backdrop-filter backdrop-blur-sm rounded-lg border-2 bg-white border-gray-50 py-12 px-20 border-opacity-10 border-solid dark:bg-gray-700 dark:bg-opacity-60"
-  in:fade
->
+<div class="card flex-col py-12 px-20" in:fade>
   <div
     class="user-profile-image h-24 w-24 mb-5 rounded-full bg-cover bg-center shadow-lg bg-gray-500 bg-opacity-20"
     style={`background-image: url('${getAbsolutePath()}images/default-profile.png')`}

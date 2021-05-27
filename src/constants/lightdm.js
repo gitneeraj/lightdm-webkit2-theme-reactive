@@ -72,7 +72,7 @@ const lightdm = () => {
         key: 'liri'
       },
       {
-        name: 'Mate',
+        name: 'LXDE',
         key: 'lxde'
       },
       {
