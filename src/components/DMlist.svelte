@@ -54,7 +54,7 @@
   </div>
 </div>
 
-<style lang="scss">
+<style>
   .dmlist {
     max-height: 45rem;
   }
