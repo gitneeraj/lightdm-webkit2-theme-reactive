@@ -1,11 +1,9 @@
 <script>
   import Header from './Header.svelte'
   import Footer from './Footer.svelte'
-  import TailwindCSS from './base/TailwindCSS.svelte'
   import GridAnimatedWall from './base/GridAnimatedWall.svelte'
 </script>
 
-<TailwindCSS />
 <div
   class="sitelayout-wrapper bg-gradient-to-r from-blueGray-900 via-purple-900 to-blueGray-900 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black"
 >
@@ -26,10 +24,8 @@
   <Footer class="z-10" />
 </div>
 
-<style lang="scss" global>
-  @import 'src/styles/index.scss';
-
-  .big-dot {
+<style>
+  /* .big-dot {
     top: 13%;
     left: 32%;
   }
@@ -37,5 +33,5 @@
   .small-dot {
     left: 57%;
     top: 63%;
-  }
+  } */
 </style>

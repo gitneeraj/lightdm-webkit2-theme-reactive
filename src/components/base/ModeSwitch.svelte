@@ -7,6 +7,7 @@
   let toggleDark = false
 
   const handleToggleDark = () => {
+    console.log('asdfsd');
     if (!toggleDark) document.querySelector('html').classList.add('dark')
     else document.querySelector('html').classList.remove('dark')
 
