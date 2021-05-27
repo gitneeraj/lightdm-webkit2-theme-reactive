@@ -22,7 +22,7 @@
 
 <button
   type="button"
-  class={`text-gray-100 focus:outline-none dark:text-gray-400 ${$$props.class}`}
+  class={`icon-btn mt-0 ${$$props.class}`}
   on:click={handleToggleDark}
 >
   <Icon
