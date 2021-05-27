@@ -58,8 +58,8 @@
       placeholder="Username"
       bind:value={username}
       autocomplete="off"
-      class={`px-2 py-2 mb-3 text-center rounded focus:shadow-md outline-none transition ease-out duration-300 bg-white bg-opacity-10 text-gray-900 placeholder-gray-300 border-2 border-gray-50 border-opacity-5 border-solid dark:text-gray-300 ${
-        isUsernameEmpty ? 'shake error-border' : ''
+      class={`form-controls ${
+        isUsernameEmpty ? 'animate-shake shadow-lg ring-red-300 ring-2' : ''
       }`}
     />
     <input
@@ -67,15 +67,16 @@
       placeholder="Password"
       bind:value={password}
       autocomplete="off"
-      class="px-2 py-2 text-center rounded focus:shadow-md outline-none transition ease-out duration-300 bg-white bg-opacity-10 text-gray-900 placeholder-gray-300 border-2 border-gray-50 border-opacity-5 border-solid dark:text-gray-300"
+      class="form-controls"
     />
-    <button
-      class="focus:outline-none text-gray-100 mt-5 dark:text-gray-400"
-      type="submit"
-      disabled={$isLogin}
-    >
+    <button class="icon-btn" type="submit" disabled={$isLogin}>
       {#if $isLogin}
-        <Icon name="loading" class="loading spinner" width="32" height="32" />
+        <Icon
+          name="loading"
+          class="animate-spin loading"
+          width="32"
+          height="32"
+        />
       {:else if $isAuthenticated}
         <Icon name="tick" class="tick" width="32" height="32" fill="#00d2a6" />
       {:else}
