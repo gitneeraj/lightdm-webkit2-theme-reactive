@@ -1,6 +1,6 @@
 {
   "name": "lightdm-webkit2-theme-reactive",
-  "version": "0.2.1",
+  "version": "0.4.1",
   "scripts": {
     "dev": "vite",
     "build:lightdm": "type=lightdm vite build",
@@ -11,17 +11,18 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.7",
     "autoprefixer": "^10.2.5",
+    "cssnano": "^5.0.1",
     "eslint": "^7.26.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-svelte3": "^3.2.0",
-    "postcss": "^8.2.15",
+    "postcss": "^8.2.10",
     "postcss-load-config": "^3.0.1",
     "prettier": "^2.3.0",
     "prettier-plugin-svelte": "^2.3.0",
-    "sass": "^1.32.12",
     "svelte": "^3.37.0",
-    "svelte-preprocess": "^4.7.3",
-    "vite": "^2.3.0"
+    "svelte-preprocess": "^4.7.1",
+    "tailwindcss": "^2.1.1",
+    "vite": "^2.3.4"
   },
   "dependencies": {
     "svelte-routing": "^1.6.0"
