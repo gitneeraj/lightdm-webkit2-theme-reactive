@@ -4,17 +4,16 @@
   import Cancel from './base/Cancel.svelte'
   import lightdm from '../constants/lightdm'
   import { getAbsolutePath } from '../helpers/getAbsolutePath'
-  import { getLocalStorage, setLocalStorage } from '../helpers/functions'
+  import { setLocalStorage } from '../helpers/functions'
   import { DEFAULT_SESSION } from '../constants/variables'
   import Icon from './base/Icon.svelte'
+  import { defaultSession } from '../store'
 
   let DEList = lightdm.sessions
-  let defaultSession =
-    getLocalStorage(DEFAULT_SESSION) || lightdm.sessions[0].key
 
   const handleDESelection = key => {
     setLocalStorage(DEFAULT_SESSION, key)
-    defaultSession = key
+    $defaultSession = key
   }
 </script>
 
@@ -32,7 +31,7 @@
           }`}
           on:click={() => handleDESelection(key)}
         >
-          {#if defaultSession === key}
+          {#if $defaultSession === key}
             <Icon
               class="absolute top-1 right-1 text-green-300"
               name="tick"
