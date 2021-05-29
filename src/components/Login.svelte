@@ -34,7 +34,7 @@
   }
 </script>
 
-<div class="card flex-col py-12 px-20" in:fade>
+<div class="card flex-col py-14 px-14" in:fade>
   <div
     class="user-profile-image h-24 w-24 mb-5 rounded-full bg-cover bg-center shadow-lg bg-gray-500 bg-opacity-20"
     style={`background-image: url('${getAbsolutePath()}images/default-profile.png')`}
@@ -58,6 +58,7 @@
       class={`form-controls ${
         isUsernameEmpty ? 'animate-shake shadow-lg ring-red-300 ring-2' : ''
       }`}
+      on:focus={() => (isUsernameEmpty = false)}
     />
     <input
       type="password"
