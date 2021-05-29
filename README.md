@@ -14,6 +14,9 @@ Check out the theme in action [here](https://gitneeraj.github.io/lightdm-webkit2
 - Choose desktop environment/Window Manager to login
 - Power options to shutdown, restart & suspend
 - Choose for DARK or LIGHT theme
+- TODO: add backgrounds and profile pictures
+- TODO: customize colors and login form placement
+- Have any cool feature? Sure, let me know on reddit @unkowncoder
 
 ## Installation
 
