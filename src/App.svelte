@@ -20,7 +20,11 @@
   })
 </script>
 
-<Router basepath={getLocalStorage(BASE_URL)}>
+<Router
+  basepath={!getLocalStorage(BASE_URL)
+    ? window.location.pathname
+    : getLocalStorage(BASE_URL)}
+>
   <Layout>
     <Route path="dmlist"><DMlist /></Route>
     <Route path="power"><Power /></Route>
