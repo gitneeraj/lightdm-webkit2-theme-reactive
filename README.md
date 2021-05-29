@@ -4,6 +4,10 @@ Fast, Modern and simple theme for lightdm webkit2 greeter written in Svelte java
 
 [![Build and Release CI](https://github.com/gitneeraj/lightdm-webkit2-theme-reactive/actions/workflows/build.yml/badge.svg)](https://github.com/gitneeraj/lightdm-webkit2-theme-reactive/actions/workflows/build.yml)
 
+## Live Demo
+
+Check out the theme in action [here](https://gitneeraj.github.io/lightdm-webkit2-theme-reactive/)
+
 ## Features
 
 - Simple login screen
