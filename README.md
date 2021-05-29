@@ -8,6 +8,15 @@ Fast, Modern and simple theme for lightdm webkit2 greeter written in Svelte java
 
 Check out the theme in action [here](https://gitneeraj.github.io/lightdm-webkit2-theme-reactive/)
 
+## Screenshots
+
+![login screen](docs/images/login.png)
+![desktop env screen](docs/images/de-list.png)
+![power options screen](docs/images/power.png)
+![dark login screen](docs/images/dark-login.png)
+![dark de list screen](docs/images/dark-de-list.png)
+![dark power screen](docs/images/dark-power.png)
+
 ## Features
 
 - Simple login screen
