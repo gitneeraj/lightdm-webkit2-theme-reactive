@@ -34,20 +34,20 @@
   }
 </script>
 
-<div class="card flex-col py-14 px-14" in:fade>
+<div class="flex-col card py-14 px-14" in:fade>
   <div
-    class="user-profile-image h-24 w-24 mb-5 rounded-full bg-cover bg-center shadow-lg bg-gray-500 bg-opacity-20"
+    class="w-24 h-24 mb-5 bg-gray-500 bg-center bg-cover rounded-full shadow-lg user-profile-image bg-opacity-20"
     style={`background-image: url('${getAbsolutePath()}images/default-profile.png')`}
   />
 
   {#if $isAuthenticationError}
-    <span transition:slide class="error-message mb-5 text-red-400"
+    <span transition:slide class="mb-5 text-red-400 error-message"
       >Invalid Credentials</span
     >
   {/if}
 
   <form
-    class="flex flex-col justify-center items-center"
+    class="flex flex-col items-center justify-center"
     on:submit|preventDefault={handleOnSubmit}
   >
     <input
