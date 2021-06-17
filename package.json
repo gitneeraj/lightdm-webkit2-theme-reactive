@@ -1,6 +1,6 @@
 {
   "name": "lightdm-webkit2-theme-reactive",
-  "version": "0.5.0",
+  "version": "0.4.3",
   "scripts": {
     "dev": "vite",
     "build:lightdm": "type=lightdm vite build",
