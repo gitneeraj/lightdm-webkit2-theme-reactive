@@ -66,6 +66,7 @@
       bind:value={password}
       autocomplete="off"
       class="form-controls"
+      autofocus
     />
     <button class="icon-btn" type="submit" disabled={$isLogin}>
       {#if $isLogin}
