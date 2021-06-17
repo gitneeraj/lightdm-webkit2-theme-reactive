@@ -48,6 +48,9 @@ git clone https://aur.archlinux.org/lightdm-webkit2-theme-reactive.git
 cd lightdm-webkit2-theme-reactive
 makepkg -si
 ```
+### Credits
+
+The DE/WM images are borrowed from [manilarome](https://github.com/manilarome)'s glorious theme
 
 ## Note
 
