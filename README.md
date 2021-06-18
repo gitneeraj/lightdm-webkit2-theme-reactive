@@ -48,6 +48,15 @@ git clone https://aur.archlinux.org/lightdm-webkit2-theme-reactive.git
 cd lightdm-webkit2-theme-reactive
 makepkg -si
 ```
+
+After the installation, you'll have to set the theme to 'reactive'. This can be done in lightdm-webkit2-greeter's config file. Usually the config can be located at `/etc/lightdm/lightdm-webkit2-greeter.conf`. Here change/update the `webkit_theme` to `reactive`. Below is an example - 
+
+```
+[greeter]
+webkit_theme        = reactive
+```
+In case you don't wish to use this theme, make sure you revert this file to the old one.
+
 ### Credits
 
 The DE/WM images are borrowed from [manilarome](https://github.com/manilarome)'s glorious theme
