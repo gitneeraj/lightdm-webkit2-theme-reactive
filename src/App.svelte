@@ -3,6 +3,8 @@
   import Login from './components/Login.svelte'
   import DMlist from './components/DMlist.svelte'
   import Power from './components/Power.svelte'
+  import Settings from './components/Settings.svelte'
+  import LoginSettings from './components/LoginSettings.svelte'
   import Layout from './components/SiteLayout.svelte'
   import {
     getLocalStorage,
@@ -28,6 +30,8 @@
   <Layout>
     <Route path="dmlist"><DMlist /></Route>
     <Route path="power"><Power /></Route>
+    <Route path="settings"><Settings /></Route>
+    <Route path="login-settings"><LoginSettings /></Route>
     <Route path="*"><Login /></Route>
   </Layout>
 </Router>
