@@ -60,6 +60,7 @@
       }`}
       on:focus={() => (isUsernameEmpty = false)}
     />
+    <!-- svelte-ignore a11y-autofocus -->
     <input
       type="password"
       placeholder="Password"
