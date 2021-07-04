@@ -12,10 +12,12 @@
     setLocalStorage
   } from './helpers/functions'
   import { onMount } from 'svelte'
-  import { BASE_URL } from './constants/variables'
+  import { BASE_URL, SETTINGS } from './constants/variables'
+  import { settings } from './store'
 
   onMount(() => {
     initiateAuthenticationComplete()
+    setLocalStorage(SETTINGS, JSON.stringify($settings))
 
     if (!getLocalStorage(BASE_URL))
       setLocalStorage(BASE_URL, window.location.pathname)

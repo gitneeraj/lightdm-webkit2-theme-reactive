@@ -1,7 +1,12 @@
 <script>
   import { slide, fade } from 'svelte/transition'
 
-  import { isAuthenticationError, isLogin, isAuthenticated } from '../store'
+  import {
+    isAuthenticationError,
+    isLogin,
+    isAuthenticated,
+    settings
+  } from '../store'
   import Icon from './base/Icon.svelte'
   import lightdm from '../constants/lightdm'
   import { DEFAULT_USERNAME } from '../constants/variables'
@@ -11,6 +16,7 @@
   let username = getLocalStorage(DEFAULT_USERNAME) || null
   let password = ''
   let isUsernameEmpty
+  const { loginScreen } = $settings
 
   const handleOnSubmit = () => {
     isUsernameEmpty = false
@@ -34,7 +40,7 @@
   }
 </script>
 
-<div class="w-full h-full flex items-center justify-start md:p-12">
+<div class={`w-full h-full flex items-center md:p-12 ${loginScreen.position}`}>
   <div class="flex-col card py-14 px-14 w-full md:w-96" in:fade>
     <div
       class="w-24 h-24 mb-5 bg-gray-500 bg-center bg-cover rounded-full shadow-lg user-profile-image bg-opacity-20"

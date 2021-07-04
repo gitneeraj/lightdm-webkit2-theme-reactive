@@ -1,0 +1,21 @@
+{
+  "loginSettings": {
+    "positions": [
+      {
+        "type": "left",
+        "text": "Left",
+        "value": "justify-start"
+      },
+      {
+        "type": "center",
+        "text": "Center",
+        "value": "justify-center"
+      },
+      {
+        "type": "right",
+        "text": "Right",
+        "value": "justify-end"
+      }
+    ]
+  }
+}
