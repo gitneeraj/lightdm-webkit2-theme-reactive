@@ -6,7 +6,7 @@
   import Cancel from './base/Cancel.svelte'
   import { loginSettings } from './content.json'
 
-  let loginPosition = 'justify-start'
+  let loginPosition = $settings.loginScreen?.position || 'justify-center'
   const { positions } = loginSettings
 
   const handleOnChange = e => {
@@ -22,12 +22,13 @@
   <h1 class="heading">Login settings</h1>
   <ul>
     <li>
-      <p class="paragraph-text">Position of login form</p>
+      <p class="paragraph-text text-center mb-2">Position of login form</p>
       <ul class="flex justify-between">
         {#each positions as position}
-          <li>
+          <li class="mr-8 last:mr-0">
             <label for={`login-position-${position.type}`}>
               <input
+                class="mr-2"
                 type="radio"
                 id={`login-position-${position.type}`}
                 bind:group={loginPosition}
