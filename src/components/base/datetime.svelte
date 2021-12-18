@@ -20,7 +20,7 @@
   $: hour = date.getHours()
   $: min = date.getMinutes()
   $: sec = date.getSeconds()
-  $: month = date.getUTCMonth() + 1
+  $: month = date.getUTCMonth()
   $: day = date.getUTCDate()
   $: year = date.getUTCFullYear()
 
