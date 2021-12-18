@@ -7,12 +7,13 @@
   import { loginSettings } from './content.json'
 
   let loginPosition = $settings.loginScreen?.position || 'justify-center'
-  const { positions } = loginSettings
+  let loginBoxType = $settings.loginScreen?.box || 'card'
+  const { positions, box } = loginSettings
 
-  const handleOnChange = e => {
+  const handleOnChange = (e, setting) => {
     updateSettings({
       loginScreen: {
-        position: e.target.value
+        [setting]: e.target.value
       }
     })
   }
@@ -33,8 +34,27 @@
                 id={`login-position-${position.type}`}
                 bind:group={loginPosition}
                 value={position.value}
-                on:change={e => handleOnChange(e)}
+                on:change={e => handleOnChange(e, 'position')}
               />{position.text}
+            </label>
+          </li>
+        {/each}
+      </ul>
+    </li>
+    <li>
+      <p class="paragraph-text text-center mb-2">Login box type</p>
+      <ul class="flex justify-between">
+        {#each box as boxType}
+          <li class="mr-8 last:mr-0">
+            <label for={`login-position-${boxType.type}`}>
+              <input
+                class="mr-2"
+                type="radio"
+                id={`login-position-${boxType.type}`}
+                bind:group={loginBoxType}
+                value={boxType.value}
+                on:change={e => handleOnChange(e, 'box')}
+              />{boxType.text}
             </label>
           </li>
         {/each}

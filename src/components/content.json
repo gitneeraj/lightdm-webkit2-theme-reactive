@@ -16,6 +16,18 @@
         "text": "Right",
         "value": "justify-end"
       }
+    ],
+    "box": [
+      {
+        "type": "with-card",
+        "text": "With Card",
+        "value": "card"
+      },
+      {
+        "type": "without-card",
+        "text": "Without Card",
+        "value": "items-center"
+      }
     ]
   }
 }
