@@ -1,33 +1,33 @@
 {
-  "loginSettings": {
-    "positions": [
-      {
-        "type": "left",
-        "text": "Left",
-        "value": "justify-start"
-      },
-      {
-        "type": "center",
-        "text": "Center",
-        "value": "justify-center"
-      },
-      {
-        "type": "right",
-        "text": "Right",
-        "value": "justify-end"
-      }
-    ],
-    "box": [
-      {
-        "type": "with-card",
-        "text": "With Card",
-        "value": "card"
-      },
-      {
-        "type": "without-card",
-        "text": "Without Card",
-        "value": "items-center"
-      }
-    ]
-  }
+    "loginSettings": {
+        "positions": [
+            {
+                "type": "left",
+                "text": "Left",
+                "value": "justify-start"
+            },
+            {
+                "type": "center",
+                "text": "Center",
+                "value": "justify-center"
+            },
+            {
+                "type": "right",
+                "text": "Right",
+                "value": "justify-end"
+            }
+        ],
+        "box": [
+            {
+                "type": "with-card",
+                "text": "With Card",
+                "value": "card"
+            },
+            {
+                "type": "without-card",
+                "text": "Without Card",
+                "value": "flex items-center"
+            }
+        ]
+    }
 }

@@ -16,7 +16,7 @@
   let username = getLocalStorage(DEFAULT_USERNAME) || null
   let password = ''
   let isUsernameEmpty
-  const { loginScreen } = $settings
+  const { loginSettings } = $settings
 
   const handleOnSubmit = () => {
     isUsernameEmpty = false
@@ -40,8 +40,13 @@
   }
 </script>
 
-<div class={`w-full h-full flex items-center md:p-12 ${loginScreen.position}`}>
-  <div class="flex-col card py-14 px-14 w-full md:w-96" in:fade>
+<div
+  class={`w-full h-full flex items-center md:p-12 ${loginSettings.position}`}
+>
+  <div
+    class={`flex-col ${loginSettings.box} py-14 px-14 w-full md:w-96`}
+    in:fade
+  >
     <div
       class="w-24 h-24 mb-5 bg-gray-500 bg-center bg-cover rounded-full shadow-lg user-profile-image bg-opacity-20"
       style={`background-image: url('${getAbsolutePath()}images/default-profile.png')`}

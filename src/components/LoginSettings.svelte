@@ -6,16 +6,17 @@
   import Cancel from './base/Cancel.svelte'
   import { loginSettings } from './content.json'
 
-  let loginPosition = $settings.loginScreen?.position || 'justify-center'
-  let loginBoxType = $settings.loginScreen?.box || 'card'
+  let loginPosition = $settings.loginSettings?.position || 'justify-center'
+  let loginBoxType = $settings.loginSettings?.box || 'card'
   const { positions, box } = loginSettings
 
   const handleOnChange = (e, setting) => {
-    updateSettings({
-      loginScreen: {
+    updateSettings(
+      {
         [setting]: e.target.value
-      }
-    })
+      },
+      'loginSettings'
+    )
   }
 </script>
 

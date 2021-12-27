@@ -1,5 +1,5 @@
 export default {
-  loginScreen: {
+  loginSettings: {
     position: 'justify-center',
     box: 'card'
   }

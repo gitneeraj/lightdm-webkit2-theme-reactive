@@ -43,17 +43,19 @@ export const initiateAuthenticationComplete = () => {
   }
 }
 
-export const updateSettings = newSettings => {
+export const updateSettings = (newSettings, settingName) => {
   const oldSettings = JSON.parse(getLocalStorage(SETTINGS))
+  const finalSettings = {
+	  ...oldSettings,
+	  [settingName]:{
+		...oldSettings[settingName],
+		...newSettings
+	  }
+    }
+	console.log(finalSettings)
   setLocalStorage(
     SETTINGS,
-    JSON.stringify({
-      ...oldSettings,
-      ...newSettings
-    })
+    JSON.stringify(finalSettings)
   )
-  settings.update(() => ({
-    ...oldSettings,
-    ...newSettings
-  }))
+  settings.update(() => (finalSettings))
 }
