@@ -19,12 +19,17 @@
         <span class="font-family-light">Login Screen</span>
       </Link>
     </li>
-    <!-- <li>
-      <Link to="settings-login" class="li-card">
-        <Icon name="image" class="lock-login mr-4" width="24" height="24" />
+    <li>
+      <Link to="background-settings" class="li-card">
+        <Icon
+          name="image"
+          class="background-settings mr-4"
+          width="24"
+          height="24"
+        />
         <span class="font-family-light">Backgrounds</span>
       </Link>
-    </li> -->
+    </li>
   </ul>
   <Cancel />
 </div>

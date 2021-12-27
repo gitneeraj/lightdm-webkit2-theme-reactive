@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   isAuthenticationError,
   isLogin,
@@ -57,4 +58,41 @@ export const updateSettings = (newSettings, settingName) => {
     JSON.stringify(finalSettings)
   )
   settings.update(() => (finalSettings))
+}
+
+export const getImages = async (dir) => {
+  const backgroundImagesDir =
+    window.greeter_config.branding.background_images ||
+    '/usr/share/backgrounds'
+
+  return await window.theme_utils.dirlist(dir ? dir : backgroundImagesDir)
+}
+
+
+export const findImages = async (dirlist) => {
+  let images = [],
+    subdirs = [],
+    recursion = 0
+  // Check image files/dir, and push it to its respective array
+  for (let file of dirlist) {
+    if (file.match(/(png|PNG)|(jpg|JPEG)|(bmp|BMP)/)) {
+      images.push(file)
+    } else if (!file.match(/\w+\.\w+/)) {
+      subdirs.push(file)
+    }
+  }
+  // Search recursively
+  if (subdirs.length && recursion < 3) {
+    recursion++
+    for (let dir of subdirs) {
+      let list = await getImages(dir)
+
+      if (list && list.length) {
+	var toadd = await findImages(list)
+	images.push.apply(images, toadd)
+      }
+    }
+  }
+  // Return array of images
+  return images
 }
