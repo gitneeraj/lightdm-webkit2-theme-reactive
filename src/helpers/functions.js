@@ -52,7 +52,6 @@ export const updateSettings = (newSettings, settingName) => {
 		...newSettings
 	  }
     }
-	console.log(finalSettings)
   setLocalStorage(
     SETTINGS,
     JSON.stringify(finalSettings)
