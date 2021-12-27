@@ -1,10 +1,11 @@
 import {
   isAuthenticationError,
   isLogin,
-  isAuthenticated
+  isAuthenticated,
+  settings
 } from '../store'
 import lightdm from '../constants/lightdm'
-import { DEFAULT_SESSION } from '../constants/variables'
+import { DEFAULT_SESSION, SETTINGS } from '../constants/variables'
 
 export const setLocalStorage = (key, value) => {
   window.localStorage.setItem(key, value)
@@ -40,4 +41,20 @@ export const initiateAuthenticationComplete = () => {
       authenticationFail()
     }
   }
+}
+
+export const updateSettings = (newSettings, settingName) => {
+  const oldSettings = JSON.parse(getLocalStorage(SETTINGS))
+  const finalSettings = {
+      ...oldSettings,
+	[settingName]:{
+	...oldSettings[settingName],
+	...newSettings
+	}
+    }
+  setLocalStorage(
+    SETTINGS,
+    JSON.stringify(finalSettings)
+  )
+  settings.update(() => (finalSettings))
 }
