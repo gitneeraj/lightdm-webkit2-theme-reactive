@@ -6,7 +6,7 @@
 </script>
 
 <div
-  class="sitelayout-wrapper bg-gradient-to-r from-blueGray-900 via-purple-900 to-blueGray-900 dark:bg-gradient-to-r dark:from-gray-900 dark:via-gray-700 dark:to-gray-900 text-gray-100 dark:text-gray-400 bg-cover bg-center"
+  class="sitelayout-wrapper bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 dark:bg-gradient-to-r dark:from-gray-900 dark:via-gray-700 dark:to-gray-900 text-gray-100 dark:text-gray-400 bg-cover bg-center"
   style={$settings?.backgroundSettings?.backgroundImage !== 'none'
     ? `background-image: url(${$settings?.backgroundSettings?.backgroundImage})`
     : ''}
