@@ -37,7 +37,7 @@
           class="w-52 h-32 flex flex-col justify-center items-center focus:outline-none cursor-pointer bg-cover bg-center bg-no-repeat rounded-lg text-2xl"
           on:click={() => handleOnChange('none', 'backgroundImage')}
         >
-          {#if $settings?.backgroundSettings?.backgroundImage === 'none'}
+          {#if !$settings?.backgroundSettings?.backgroundImage || $settings?.backgroundSettings?.backgroundImage === 'none'}
             <Icon
               class="absolute top-1 right-1 text-green-300"
               name="tick"

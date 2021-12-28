@@ -5,7 +5,8 @@
   import Power from './components/Power.svelte'
   import Settings from './components/Settings.svelte'
   import LoginSettings from './components/LoginSettings.svelte'
-  import BackgroundSettings from './components/BackgroundSettings.svelte'
+  import BackgroundPictures from './components/BackgroundPictures.svelte'
+  import BackgroundPatterns from './components/BackgroundPatterns.svelte'
   import Layout from './components/SiteLayout.svelte'
   import {
     getLocalStorage,
@@ -35,7 +36,8 @@
     <Route path="power"><Power /></Route>
     <Route path="settings"><Settings /></Route>
     <Route path="login-settings"><LoginSettings /></Route>
-    <Route path="background-settings"><BackgroundSettings /></Route>
+    <Route path="background-pictures"><BackgroundPictures /></Route>
+    <Route path="background-patterns"><BackgroundPatterns /></Route>
     <Route path="*"><Login /></Route>
   </Layout>
 </Router>

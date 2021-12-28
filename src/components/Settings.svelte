@@ -20,14 +20,25 @@
       </Link>
     </li>
     <li>
-      <Link to="background-settings" class="li-card">
+      <Link to="background-pictures" class="li-card">
         <Icon
           name="image"
           class="background-settings mr-4"
           width="24"
           height="24"
         />
-        <span class="font-family-light">Backgrounds</span>
+        <span class="font-family-light">Background Pictures</span>
+      </Link>
+    </li>
+    <li>
+      <Link to="background-patterns" class="li-card">
+        <Icon
+          name="image"
+          class="background-settings mr-4"
+          width="24"
+          height="24"
+        />
+        <span class="font-family-light">Background Patterns</span>
       </Link>
     </li>
   </ul>
