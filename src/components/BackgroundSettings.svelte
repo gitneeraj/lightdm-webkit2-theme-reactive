@@ -34,7 +34,7 @@
         class={`card justify-center text-gray-100 dark:text-gray-400 hover:bg-opacity-10 dark:hover:bg-opacity-20 m-3 transition duration-200 relative`}
       >
         <button
-          class="w-52 h-32 flex flex-col justify-center items-center focus:outline-none cursor-pointer bg-cover bg-center bg-no-repeat rounded-lg"
+          class="w-52 h-32 flex flex-col justify-center items-center focus:outline-none cursor-pointer bg-cover bg-center bg-no-repeat rounded-lg text-2xl"
           on:click={() => handleOnChange('none', 'backgroundImage')}
         >
           {#if $settings?.backgroundSettings?.backgroundImage === 'none'}
@@ -45,6 +45,7 @@
               width="24"
             />
           {/if}
+          None
         </button>
       </li>
       {#each backgrounds as background}
