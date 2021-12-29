@@ -16,23 +16,23 @@
     ? `background-image: url(${$settings?.backgroundSettings?.backgroundImage})`
     : ''}
 >
-  {#if $settings.backgroundSettings.animatedWalls === 'true'}
+  {#if $settings.backgroundSettings.animatedWalls}
     <GridAnimatedWall />
   {/if}
 
-  {#if $settings.backgroundSettings.shootingStars === 'true'}
+  {#if $settings.backgroundSettings.shootingStars}
     <ShootingStars />
   {/if}
 
-  {#if $settings.backgroundSettings.floatingBubbles === 'true'}
+  {#if $settings.backgroundSettings.floatingBubbles}
     <FloatingBubbles />
   {/if}
 
-  {#if $settings.backgroundSettings.fireflies === 'true'}
+  {#if $settings.backgroundSettings.fireflies}
     <Fireflies />
   {/if}
 
-  {#if $settings.backgroundSettings.colorDrops === 'true'}
+  {#if $settings.backgroundSettings.colorDrops}
     <ColorDrops />
   {/if}
   <Header class="z-10" />

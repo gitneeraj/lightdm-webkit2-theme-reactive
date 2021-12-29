@@ -33,8 +33,8 @@
     <li>
       <Link to="background-patterns" class="li-card">
         <Icon
-          name="image"
-          class="background-settings mr-4"
+          name="pattern"
+          class="background-patterns mr-4"
           width="24"
           height="24"
         />

@@ -62,10 +62,12 @@ export const updateSettings = (newSettings, settingName) => {
 
 export const getImages = async (dir) => {
   const backgroundImagesDir =
-    window.greeter_config.branding.background_images ||
+    (window.greeter_config &&
+      window.greeter_config.branding &&
+      window.greeter_config.branding.background_images) ||
     '/usr/share/backgrounds'
 
-  return await window.theme_utils.dirlist(dir ? dir : backgroundImagesDir)
+  return window.theme_utils && await window.theme_utils.dirlist(dir ? dir : backgroundImagesDir)
 }
 
 

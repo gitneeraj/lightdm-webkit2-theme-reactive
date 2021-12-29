@@ -5,7 +5,6 @@ export default {
   },
   backgroundSettings: {
     backgroundImage: 'none',
-    animatedColorBalls: "false",
-    animatedWalls: "true"
+    animatedWalls: true
   }
 }

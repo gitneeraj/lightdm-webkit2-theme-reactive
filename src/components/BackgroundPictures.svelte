@@ -7,6 +7,11 @@
   import Cancel from './base/Cancel.svelte'
   import Icon from './base/Icon.svelte'
   let backgrounds = []
+  const backgroundPath =
+    (window.greeter_config &&
+      window.greeter_config.branding &&
+      window.greeter_config.branding.background_images) ||
+    '/usr/share/backgrounds'
 
   const handleOnChange = (value, setting) => {
     updateSettings(
@@ -17,7 +22,7 @@
     )
   }
 
-  findImages(['/usr/share/backgrounds']).then(backgroundImages => {
+  findImages([backgroundPath]).then(backgroundImages => {
     backgrounds = backgroundImages
   })
 </script>
