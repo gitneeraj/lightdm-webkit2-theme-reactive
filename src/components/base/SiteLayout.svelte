@@ -4,8 +4,6 @@
   import GridAnimatedWall from './base/GridAnimatedWall.svelte'
   import ShootingStars from './base/ShootingStars.svelte'
   import FloatingBubbles from './base/FloatingBubbles.svelte'
-  import Fireflies from './base/Fireflies.svelte'
-  import ColorDrops from './base/ColorDrops.svelte'
   import { settings } from '../store'
 </script>
 
@@ -16,25 +14,18 @@
     ? `background-image: url(${$settings?.backgroundSettings?.backgroundImage})`
     : ''}
 >
-  {#if $settings.backgroundSettings.animatedWalls}
+  {#if $settings.backgroundSettings.animatedWalls === 'true'}
     <GridAnimatedWall />
   {/if}
 
-  {#if $settings.backgroundSettings.shootingStars}
+  {#if $settings.backgroundSettings.shootingStars === 'true'}
     <ShootingStars />
   {/if}
 
-  {#if $settings.backgroundSettings.floatingBubbles}
+  {#if $settings.backgroundSettings.floatingBubbles === 'true'}
     <FloatingBubbles />
   {/if}
 
-  {#if $settings.backgroundSettings.fireflies}
-    <Fireflies />
-  {/if}
-
-  {#if $settings.backgroundSettings.colorDrops}
-    <ColorDrops />
-  {/if}
   <Header class="z-10" />
   <main class="main main-wrapper z-10">
     <slot />

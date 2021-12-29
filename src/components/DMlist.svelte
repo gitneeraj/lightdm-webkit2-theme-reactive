@@ -26,9 +26,7 @@
     >
       {#each DEList as { key, name }}
         <li
-          class={`card justify-center text-gray-100 dark:text-gray-400 hover:bg-opacity-10 dark:hover:bg-opacity-20 mb-6 transition duration-200 relative ${
-            DEList.length === 1 ? 'mr-0' : 'mr-6'
-          }`}
+          class={`card justify-center text-gray-100 dark:text-gray-400 hover:bg-opacity-10 dark:hover:bg-opacity-20 m-3 transition duration-200 relative`}
         >
           <button
             class="w-32 h-32 flex flex-col justify-center items-center focus:outline-none cursor-pointer"

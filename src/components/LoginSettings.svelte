@@ -20,7 +20,7 @@
   }
 </script>
 
-<div class="wrapper w-full md:w-96" in:fade>
+<div class="card p-5 wrapper w-full md:w-96" in:fade>
   <h1 class="heading">Login settings</h1>
   <ul>
     <li>
