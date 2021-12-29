@@ -62,7 +62,7 @@ webkit_theme        = reactive
 In case you don't wish to use this theme, make sure you revert this file to the old one.
 
 ### Background images
-By default `/usr/share/backgrounds` will be scanned to fetch any background images that is placed there. You can also update the below setting to your custom path - 
+By default `/usr/share/backgrounds` will be scanned to fetch any background images that is placed there. You can also update the below setting to your custom path in file `/etc/lightdm/lightdm-webkit2-greeter.conf` 
 
 ```
 [branding]
