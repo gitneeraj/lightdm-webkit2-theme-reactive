@@ -29,5 +29,13 @@
                 "value": "flex items-center"
             }
         ]
+    },
+    "backgroundSettings": {
+        "backgroundPatterns": [
+            {
+                "type": "grid-animated-walls",
+                "text": "Animated Grid Walls"
+            }
+        ]
     }
 }

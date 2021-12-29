@@ -4,6 +4,8 @@ export default {
     box: 'card'
   },
   backgroundSettings: {
-    backgroundImage: 'none'
+    backgroundImage: 'none',
+    animatedColorBalls: "false",
+    animatedWalls: "true"
   }
 }

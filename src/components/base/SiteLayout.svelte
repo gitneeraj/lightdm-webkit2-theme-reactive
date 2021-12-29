@@ -4,8 +4,6 @@
   import GridAnimatedWall from './base/GridAnimatedWall.svelte'
   import ShootingStars from './base/ShootingStars.svelte'
   import FloatingBubbles from './base/FloatingBubbles.svelte'
-  import Fireflies from './base/Fireflies.svelte'
-  import ColorDrops from './base/ColorDrops.svelte'
   import { settings } from '../store'
 </script>
 
@@ -28,13 +26,6 @@
     <FloatingBubbles />
   {/if}
 
-  {#if $settings.backgroundSettings.fireflies === 'true'}
-    <Fireflies />
-  {/if}
-
-  {#if $settings.backgroundSettings.colorDrops === 'true'}
-    <ColorDrops />
-  {/if}
   <Header class="z-10" />
   <main class="main main-wrapper z-10">
     <slot />
