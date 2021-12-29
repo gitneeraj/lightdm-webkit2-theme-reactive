@@ -12,7 +12,7 @@ Check out the theme in action [here](https://gitneeraj.github.io/lightdm-webkit2
 
 ![login screen](docs/images/login.png)
 ![theme config](docs/images/theme-config.png)
-![background patterns](docs/images/patterns.png)
+![background patterns](docs/images/bg-patterns.png)
 ![desktop env screen](docs/images/de-list.png)
 ![power options screen](docs/images/power.png)
 ![dark login screen](docs/images/dark-login.png)
