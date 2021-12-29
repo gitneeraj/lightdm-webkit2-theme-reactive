@@ -11,6 +11,8 @@ Check out the theme in action [here](https://gitneeraj.github.io/lightdm-webkit2
 ## Screenshots
 
 ![login screen](docs/images/login.png)
+![theme config](docs/images/theme-config.png)
+![background patterns](docs/images/patterns.png)
 ![desktop env screen](docs/images/de-list.png)
 ![power options screen](docs/images/power.png)
 ![dark login screen](docs/images/dark-login.png)
@@ -23,8 +25,10 @@ Check out the theme in action [here](https://gitneeraj.github.io/lightdm-webkit2
 - Choose desktop environment/Window Manager to login
 - Power options to shutdown, restart & suspend
 - Choose for DARK or LIGHT theme
-- TODO: add backgrounds and profile pictures
-- TODO: customize colors and login form placement
+- Change background images (defaults to `/usr/share/backgrounds` location)
+- Change login box placement and its style (with or without card)
+- TODO: customize profile pictures
+- TODO: customize colors 
 - Have any cool feature? Sure, let me know on reddit @unkowncoder
 
 ## Installation
@@ -56,6 +60,14 @@ After the installation, you'll have to set the theme to 'reactive'. This can be 
 webkit_theme        = reactive
 ```
 In case you don't wish to use this theme, make sure you revert this file to the old one.
+
+### Background images
+By default `/usr/share/backgrounds` will be scanned to fetch any background images that is placed there. You can also update the below setting to your custom path - 
+
+```
+[branding]
+background_images = /usr/share/backgrounds
+```
 
 ### Credits
 
