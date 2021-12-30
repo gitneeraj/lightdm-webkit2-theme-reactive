@@ -72,9 +72,11 @@ By default `/usr/share/backgrounds` will be scanned to fetch any background imag
 background_images = /usr/share/backgrounds
 ```
 ### Profile Pictures
-In order to let this theme pick up the profile picture for the user, make sure you place the picture inside your home folder with the name of `.face`. After deciding on your profile picture selection, move or place it in your home dir with the name of `.face`(just that). Make sure your picture does not exceed the deminsions of 200x200 pixels. Example: `/home/neeraj/.face`
+~~In order to let this theme pick up the profile picture for the user, make sure you place the picture inside your home folder with the name of `.face`. After deciding on your profile picture selection, move or place it in your home dir with the name of `.face`(just that). Make sure your picture does not exceed the deminsions of 200x200 pixels. Example: `/home/neeraj/.face`~~
 
-That's it! This theme should automatically pick up that picture(as you typed your valid username or for saved username) and set it as profile picture in the greeter.
+~~That's it! This theme should automatically pick up that picture(as you typed your valid username or for saved username) and set it as profile picture in the greeter.~~
+
+Add `Icon=/var/lib/AccountsService/icons/<youraccountname>` to the bottom of `/var/lib/AccountsService/users/<youraccountname>` and place a profile image at `/var/lib/AccountsService/icons/<youraccountname>`
 
 ### :bouquet: Credits
 
