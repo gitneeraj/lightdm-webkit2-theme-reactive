@@ -98,3 +98,7 @@ export const findImages = async (dirlist) => {
   // Return array of images
   return images
 }
+
+export const getUser = (username) => {
+  return lightdm.users.filter(user => user.username === username)
+}

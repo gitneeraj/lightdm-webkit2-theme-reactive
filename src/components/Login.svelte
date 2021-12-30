@@ -11,9 +11,16 @@
   import lightdm from '../constants/lightdm'
   import { DEFAULT_USERNAME } from '../constants/variables'
   import { getAbsolutePath } from '../helpers/getAbsolutePath'
-  import { setLocalStorage, getLocalStorage } from '../helpers/functions'
+  import {
+    setLocalStorage,
+    getLocalStorage,
+    getUser
+  } from '../helpers/functions'
 
   let username = getLocalStorage(DEFAULT_USERNAME) || null
+  $: picture =
+    (getUser(username) && getUser(username)[0] && getUser(username)[0].image) ||
+    `${getAbsolutePath()}images/default-profile.png`
   let password = ''
   let isUsernameEmpty
   const { loginSettings } = $settings
@@ -49,7 +56,7 @@
   >
     <div
       class="w-24 h-24 mb-5 bg-gray-500 bg-center bg-cover rounded-full shadow-lg user-profile-image bg-opacity-20"
-      style={`background-image: url('${getAbsolutePath()}images/default-profile.png')`}
+      style={`background-image: url('${picture}')`}
     />
 
     {#if $isAuthenticationError}
