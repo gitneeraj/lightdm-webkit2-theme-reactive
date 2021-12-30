@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.6] - 2021-05-29
+
+### Added
+
+- feature to add background images
+- feature to add background patterns
+
+### Changed
+
+- minor design updates to use card layout in the settings pages
+
+### Updated
+
+- updated tailwind to use v3
+
+## [0.4.5] - 2021-05-29
+
+### fixed
+
+- fixed issue for December month
+
+## [0.4.4] - 2021-05-29
+
+### Changed
+
+- cleanups and minor design fixes for login screen
+
 ## [0.4.3] - 2021-05-29
 
 ### Changed
