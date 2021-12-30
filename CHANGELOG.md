@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.6] - 2021-05-29
+## [0.4.6] - 2021-12-26
 
 ### Added
 
@@ -20,13 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - updated tailwind to use v3
 
-## [0.4.5] - 2021-05-29
+## [0.4.5] - 2021-12-17
 
 ### fixed
 
 - fixed issue for December month
 
-## [0.4.4] - 2021-05-29
+## [0.4.4] - 2021-06-17
 
 ### Changed
 
