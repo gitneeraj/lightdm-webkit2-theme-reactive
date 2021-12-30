@@ -34,7 +34,7 @@ Check out the theme in action [here](https://gitneeraj.github.io/lightdm-webkit2
 - TODO: customize colors 
 - Have any cool feature? Sure, let me know on reddit @unkowncoder
 
-## Installation
+## :hammer_and_wrench: Installation
 
 This theme requires `lightdm-webkit2-greeter` to be installed in prior.
 
@@ -71,11 +71,15 @@ By default `/usr/share/backgrounds` will be scanned to fetch any background imag
 [branding]
 background_images = /usr/share/backgrounds
 ```
+### Profile Pictures
+In order to let this theme pick up the profile picture for the user, make sure you place the picture inside your home folder with the name of `.face`. After deciding on your profile picture selection, move or place it in your home dir with the name of `.face`(just that). Make sure your picture does not exceed the deminsions of 200x200 pixels. Example: `/home/neeraj/.face`
 
-### Credits
+That's it! This theme should automatically pick up that picture(as you typed your valid username or for saved username) and set it as profile picture in the greeter.
+
+### :bouquet: Credits
 
 The DE/WM images are borrowed from [manilarome](https://github.com/manilarome)'s glorious theme
 
-## Note
+## :scroll: Note
 
 This theme is still in active development and some feature may be added/removed before it hits 1.0.0. If you encounter any issues related to its functionality, please create a issue on the github repo. Thanks & Peace!
