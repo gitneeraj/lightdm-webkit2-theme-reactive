@@ -45,6 +45,7 @@
               alt={name}
               height="64"
               width="64"
+              onerror={`this.onerror=null; this.src='${getAbsolutePath()}images/sessions/session-default.png'`}
             />
             <span class="justify-self-end font-family-regular">{name}</span>
           </button>
