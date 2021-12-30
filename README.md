@@ -2,6 +2,9 @@
 
 Fast, Modern and simple theme for lightdm webkit2 greeter written in Svelte javascript frontend framework for less bloat.
 
+#### :star: Star Statement! :smile:
+If you like this theme or using it, please don't forget to give a :star:Star:star: to this repository for motivation and support.
+
 [![Build and Release CI](https://github.com/gitneeraj/lightdm-webkit2-theme-reactive/actions/workflows/build.yml/badge.svg)](https://github.com/gitneeraj/lightdm-webkit2-theme-reactive/actions/workflows/build.yml)
 
 ## Live Demo
