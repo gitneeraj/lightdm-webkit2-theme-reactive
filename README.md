@@ -78,6 +78,8 @@ background_images = /usr/share/backgrounds
 
 Add `Icon=/var/lib/AccountsService/icons/<youraccountname>` to the bottom of `/var/lib/AccountsService/users/<youraccountname>` and place a profile image at `/var/lib/AccountsService/icons/<youraccountname>`
 
+For more info - https://wiki.archlinux.org/title/LightDM#Changing_your_avatar
+
 ### :bouquet: Credits
 
 The DE/WM images are borrowed from [manilarome](https://github.com/manilarome)'s glorious theme
