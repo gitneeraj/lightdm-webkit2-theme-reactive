@@ -41,7 +41,7 @@
     lightdm.authenticate(username)
 
     setTimeout(() => {
-      console.log(`responding for user ${username} password ${password}`)
+      console.log(`responding for user ${username}`)
       lightdm.respond(password)
     }, 1000)
   }
